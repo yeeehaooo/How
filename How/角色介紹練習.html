@@ -23,79 +23,115 @@
             font-family: 'Noto Sans TC', sans-serif;
             list-style: none;
         }
-        .contanier{
+        html,body{
             height: 100%;
-            width:auto;
+            }
+        body{            
+            background:linear-gradient(-35deg,rgb(162, 0, 255), rgb(0, 183, 255) );
             display: flex;
             align-items: center;
+            
         }
         .wrap{
             width: 1200px;
-            height: auto;
             display: flex;
-            margin: auto;
+            align-content: center;    
+            margin:auto ;        
         }
         .item{
-            widows: 300px;
-            margin: 15px auto;
-            text-align: center;
+            width: 270px;
+            margin:15px;
+            text-align: center;                     
+            border-radius:22px ;
+            background-color: #fff;
+            transition:.5s;
+            
         }
         .item img{
             width: 100%;
+            border-radius:20px ;
+            vertical-align: middle;
         }
         .item h2{
             border-bottom: 1px solid #888;
             padding-bottom: .3em;
             margin-bottom: .4em;
-            font-weight: 700;
+            font-weight: 800;
+            transition:.25s;
         }
         .item p {
             line-height: 1.5;
+            font-weight: 700;
+            transition:.25s;
         }
+        .item .txt{
+            padding: 20px;
+            position: relative;
+            transition:.25s;
+
+        }
+        .item:hover .txt{
+            background-color:linear-gradient(-30deg, rgb(245, 116, 11),rgb(255, 203, 61) );
+        }
+        .item .txt:before{
+            content:'';
+            position: absolute;
+            width: 0;
+            height: 0;
+            left: 0;
+            top: 0;
+            border-top: 50px solid transparent;
+            border-left: 135px solid #FFF;
+            border-right: 135px solid #FFF;
+            transform: translateY(-100%);
+        }
+        .item:hover{
+            transform: translateY(-30px);
+        }
+
+        .item:hover h2{
+            color:rgb(199, 196, 193);
+        }
+        .item:hover p{
+            color:rgb(199, 196, 193);
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="contanier">    
-        <div class="row wrap">
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <img src="https://picsum.photos/300/300?random=10">
-                        <div class="txt">
-                            <h2>HOW</h2>
-                            <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <img src="https://picsum.photos/300/300?random=20">
-                        <div class="txt">
-                            <h2>HOW</h2>
-                            <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <img src="https://picsum.photos/300/300?random=30">
-                        <div class="txt">
-                            <h2>HOW</h2>
-                            <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="item">
-                        <img src="https://picsum.photos/300/300?random=40">
-                        <div class="txt">
-                            <h2>HOW</h2>
-                            <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>        
+    <div class="wrap">
+        <div class="col-12 col-md-6 col-lg-3 item">
+            <img src="https://picsum.photos/300/300?random=10">
+            <div class="txt">
+                <h2>HOW</h2>
+                <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 item">
+            <img src="https://picsum.photos/300/300?random=20">
+            <div class="txt">
+                <h2>HOW</h2>
+                <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+        </div>
+    
+        <div class="col-12 col-md-6 col-lg-3 item">
+            <img src="https://picsum.photos/300/300?random=30">
+            <div class="txt">
+                <h2>HOW</h2>
+                <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-3 item">
+            <img src="https://picsum.photos/300/300?random=40">
+            <div class="txt">
+                <h2>HOW</h2>
+                <p>lorem ipsum dolor sit amet, consectetur,lorem ipsum dolor sit amet, consectetur</p>
+            </div>
+        </div>
     </div>
+  
     <!-- Optional JavaScript; choose one of the two! -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
